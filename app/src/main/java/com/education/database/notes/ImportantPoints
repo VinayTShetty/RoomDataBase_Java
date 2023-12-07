@@ -1,0 +1,18 @@
+1)Add the Depedency in the App Level Gradle File.(Room Depedency)
+ https://developer.android.com/training/data-storage/room#groovy
+
+    def room_version = "2.6.1"
+
+     implementation "androidx.room:room-runtime:$room_version"
+     annotationProcessor "androidx.room:room-compiler:$room_version"
+
+2) Make Appropiate Design Changes in Corresponding XML
+3)Create a Package with Room
+
+4)Create a Entity class. i.e User
+    i.e Fields used to store data, that is Column Data.
+    ex:- Username,Password,PhoneNumber etc
+
+    Add annotation as AutoGenerate =true, so that it will be generated automatically for every entry.
+
+5) Create a DAO interface for Select,Insert,Update,Delete,
