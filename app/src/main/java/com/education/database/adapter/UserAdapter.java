@@ -23,7 +23,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemViewHolder
         this.itemClickListener = itemClickListener;
 
     }
-
     public void updateData(List<Users> newData) {
         this.usersList=newData;
         notifyDataSetChanged();
@@ -85,7 +84,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemViewHolder
 
     public interface UserItemClickListener {
         void onEditClick(Users users);
-
         void onDeleteClick(Users users);
     }
 }

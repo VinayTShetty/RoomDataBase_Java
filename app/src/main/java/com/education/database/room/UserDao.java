@@ -13,16 +13,12 @@ public interface UserDao {
 
     @Insert
     void insert(Users users);
-
     @Update
     void update(Users users);
-
     @Delete
     void delete(Users users);
-
     @Query("SELECT * FROM users WHERE id = :userId")
     Users getUserById(long userId);
-
     @Query("SELECT * FROM users ORDER BY id DESC")
     List<Users> getAllNotes();
 }

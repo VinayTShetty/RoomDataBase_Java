@@ -10,9 +10,32 @@
 3)Create a Package with Room
 
 4)Create a Entity class. i.e User
+    Entity: Entity is a modal class that is annotated with @Entity.
+    This class is having variables that will be our columns and the class is our table.
+
     i.e Fields used to store data, that is Column Data.
     ex:- Username,Password,PhoneNumber etc
-
     Add annotation as AutoGenerate =true, so that it will be generated automatically for every entry.
 
-5) Create a DAO interface for Select,Insert,Update,Delete,
+5)
+This is an abstract class that extends RoomDatabase, this is where you define the entities (tables)and the version number of your database.
+It contains the database holder and serves as the main access point for the underlying connection
+
+5)@Dao — Data Access Object
+An Interface where we put all our SQL queries.
+We don’t require to write whole queries now; we need to make a method and annotate with specific annotations like
+
+
+
+Thread Operation in Android.
+
+In Android all operation are by default carried by Main Thread.
+Its usually not recomended to do all operation by MainThread,Bcoz the application can freeze the screen.
+So its recomended to create backgroud Thread and do the computation.
+Only UI related changes are handled from MainThread.
+
+
+How to create a BackGround Thread.
+It can be created in 2 ways.
+1)Create a New Thread and execute runnable.
+2)Use Async Task for creating the BackGroud Thread.

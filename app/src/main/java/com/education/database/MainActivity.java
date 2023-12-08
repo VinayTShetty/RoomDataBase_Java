@@ -2,6 +2,7 @@ package com.education.database;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.AsyncListDiffer;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.education.database.adapter.UserAdapter;
@@ -23,7 +25,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements UserAdapter.UserItemClickListener {
 
-    private EditText editTextName;
+    private TextView editTextName;
     private Button addButton;
     private RecyclerView recyclerView;
     private UserAdapter userAdapter;
@@ -141,6 +143,7 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.UserI
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         userAdapter=new UserAdapter(usersListAlreadyavaliable,MainActivity.this);
         recyclerView.setAdapter(userAdapter);
+        recyclerView.addItemDecoration(new DividerItemDecoration(MainActivity.this,LinearLayoutManager.VERTICAL));
     }
 
     private void hideSoftKeyboard() {

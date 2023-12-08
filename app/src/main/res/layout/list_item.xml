@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
 
-    <!-- Name Field -->
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:hint="Name"
-        android:inputType="textPersonName" />
+    app:cardCornerRadius="8dp">
 
-    <ImageView
-        android:id="@+id/imageview_edit"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/baseline_edit_24">
-    </ImageView>
-    <ImageView
-        android:id="@+id/imageview_delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_delete_forever_24">
-    </ImageView>
-    <!-- Email Field -->
-</LinearLayout>
+        android:orientation="horizontal"
+        android:background="#57BAE6"
+        android:padding="16dp">
+
+        <!-- Name Field -->
+        <TextView
+            android:id="@+id/editTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textStyle="bold|italic"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+
+        <ImageView
+            android:id="@+id/imageview_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_edit_24">
+        </ImageView>
+        <ImageView
+            android:id="@+id/imageview_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_delete_forever_24">
+        </ImageView>
+        <!-- Email Field -->
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
